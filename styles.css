@@ -4,7 +4,8 @@ main {
 }
 
 body {
-    background: green;
+    background: rgb(54, 110, 54);
+    margin: 0 20%;
 }
 
 header {
@@ -159,6 +160,19 @@ nav {
     z-index: 1;
 }
 
+.B1 {
+    max-width: 800px;
+}
+
+@media (max-width: 1100px) {
+    body {
+        margin: 0 10%;
+    }
+    .B1 {
+        max-width: 600px;
+    }
+}
+
 @media (max-width: 768px) {
     .dropdown {
         display: flex;
@@ -171,6 +185,7 @@ nav {
 
     body {
         font-size: 60%;
+        margin: 0 3%;
     }
 
     .titel {
@@ -190,5 +205,9 @@ nav {
     .dropbtn2 {
         font-size: 10px;
         padding: 7px 4px;
+    }
+
+    .B1 {
+        max-width: 500px;
     }
 }

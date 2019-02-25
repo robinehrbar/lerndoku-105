@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="de-ch">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Doku 105</title>
     <link href="styles.css" rel="stylesheet" type="text/css">
-    <link rel="icon" href="https://hackr.io/tutorials/sql/logo-sql.svg?ver=1549215536">
+    <link rel="icon" href="http://hackr.io/tutorials/sql/logo-sql.svg?ver=1549215536">
 </head>
+
 <body>
     <header>
         <nav class="navdropdown">
@@ -20,7 +22,7 @@
                     <a href="#04">Datentypen</a>
                     <a href="#05">Funktionen & Operatoren</a>
                 </div>
-            </div> 
+            </div>
             <div class="dropdown">
                 <button class="dropbtn1">SQL Sprachen</button>
                 <div class="dropdown-content">
@@ -30,7 +32,7 @@
                     <a href="#09">DML</a>
                     <a href="#10">DQL</a>
                 </div>
-            </div>  
+            </div>
             <div class="dropdown">
                 <button class="dropbtn2">Verbindungen</button>
                 <div class="dropdown-content">
@@ -50,19 +52,33 @@
             SQL
         </h1>
         <p>
-
+            SQL heisst ausgeschrieben <b>Structured Query Language</b> und ist nichts anderes wie eine
+            Datenbanksprache, welche die Möglichkeiten zum Einfügen, Verändern, Löschen und Abfragen von Datenbanken
+            bietet. <br> Ihre Syntax ist relativ einfach aufgebaut. Jedoch gibt es unterschiedliche "Dialekte" also
+            Abweichungen von verwandten SQL Sprachen, wie zum Beispiel MySQL oder SQL-Server. <br> <br> SQL funktioniert grundsätzlich so, dass man als allererstes Datenbanken erstellen, bearbeiten und löschen kann. <br>
         </p>
         <h2 id="03">
             Installation & Vorbereitung von SQL
         </h2>
         <p>
-
+            Ich gehe hier auf die Installation bei einer Linux-Distribution ein, da wir uns im Terminal aufhalten
+            werden. <br> Bekanntlich sind Installation mit Linux ziemlich banal, auch hier ist es keine Schwierigkeit
+            SQL zu benutzen. Wir benutzen am Besten MySQL um allen Linux-Distribution gleiche Voraussetzungen zu
+            schaffen. Die Version 4.0.13 ist zwar etwas veraltet, jedoch beinhaltet sie Alles was wir brauchen und
+            nicht mehr und nicht weniger. <br> Installieren tut man MySQL mit folgenden Befehlen im Terminal: <br> sudo
+            apt-get install mysql <br> Passwort eingeben <br> Y schreiben <br> Und schon ist MySQL installiert. Ab
+            jetzt kann man MySQL mit diesem Befehl öffnen: <br> mysql -u root -p <br> Und dann kann man das Passwort
+            eingeben, welches man bei der Installation im pinken Dialogfenster definiert hat. Somit ist man nun in
+            MySQL.
         </p>
         <h2 id="04">
             Datentypen
         </h2>
         <p>
-
+            Bei SQL gibt es unterschiedliche Datentypen mit jeweils bestimmten Eigenschaften. Man sollte sie unbedingt
+            unterscheiden, um später alle Funktionen von SQL nutzen zu können. <br> Mit dem unten abgebildeten
+            Flussdiagramm können sie mit Leichtigkeit Den richtigen Datentyp für ihr Attribut herausfinden.<br>
+            <img class="B1" src="Datentypen.jpg" alt="Flussdiagramm Datentypen">
         </p>
         <h2 id="05">
             Funktionen & Operatoren
@@ -131,4 +147,5 @@
         </p>
     </footer>
 </body>
+
 </html>
