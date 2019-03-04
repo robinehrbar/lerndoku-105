@@ -100,7 +100,7 @@
             AVG() - Ergibt den Durchschnitt von alle nausgewählten Werten <br>
             CEILING() / CEIL() - Rundet die Zahl auf <br>
             COUNT() - Ergibt die Anzahl an von einer Tabelle, welche eine bestimmte Bedingung erfüllen <br>
-            FLOOR()	- Rundet die Zahl ab <br>
+            FLOOR() - Rundet die Zahl ab <br>
             LOWER() - Ergibt den Wert in Grossbuchstaben <br>
             MAX() - Ergibt das Maximum aus einem bestimmten Bereich <br>
             MIN() - Ergibt das Minimum aus einem bestimmten Bereich <br>
@@ -110,50 +110,87 @@
             ROUND() - Rundet die Zahl mathematisch auf oder ab <br>
             SIGN() - Ergibt eine 1 bei positiven Zahlen, eine -1 bei negativen Zahlen und eine 0 bei 0. <br>
             SQRT() - Ergibt die Quadratwurzel von der Zahl <br>
-            UPPER() - Ergibt den Wert in Kleinbuchstaben 
+            UPPER() - Ergibt den Wert in Kleinbuchstaben
         </p>
         <h1 id="06">
             Übersicht Sprachen
-
         </h1>
         <p>
-
+            Um SQL genauer verstehen zu können, sollten wir die vier Teilsprachen unterscheiden. Unterschieden wird
+            zwischen DDL=Data Definition Language, DCL=Data Control Language, DML=Data Manipulation Language und
+            DQL=Data Query Language.
         </p>
         <h2 id="07">
             Data Definition Language
         </h2>
         <p>
-
+            Die DDL dient dazu, Datenbanken und Tabellen zu erstellen, bearbeiten, löschen und Informationen über
+            Tabellen und deren Erstellung anzeigen zu lassen. Gemacht wird dies mit folgenden Statements: <br>
+            CREATE - CREATE TABLE Tabelle <br>
+            ALTER - ALTER TABLE Tabelle DROP Attribut <br>
+            DROP - DATABASE Datenbank <br>
+            DESCRIBE - DESCRIBE Tabelle <br>
+            SHOW - SHOW CREATE TABLE Tabelle
         </p>
         <h2 id="08">
             Data Control Language
         </h2>
         <p>
-
+            Wie man dem Namen Data Control Language schon entnehmen kann, geht es bei der DCL um Kontrolle, also um
+            Rechte. Hier kann man Rechte zuweisen und entnehmen oder auch Rechte von Benutzern anzeigen lassen. Man kann
+            Nutzer vor dem Rechte zuweisen auch manuell erstellen, da dies aber meiner Meinung nach keinen Sinn
+            aufweist, gehe ich darauf auch nicht ein. Hier sind die drei brauchbaren Statements:<br>
+            GRANT - GRANT RechteXY ON Datenbank.Tabelle TO Benutzer IDENTIFIED BY 'Passwort' WITH GRANT OPTION <br>
+            REVOKE - REVOKE Rechte on Datenbank.Tabelle FROM Benutzer <br>
+            SHOW GRANTS - SHOW GRANTS FOR Benutzer <br>
         </p>
         <h2 id="09">
             Data Manipulation Language
         </h2>
         <p>
-
+            Am meisten in der Praxis genutzt wird wahrscheinlich die DML. Den damit werden einzelne Datensätze erstellt,
+            verändert und gelöscht, dies funktioniert so: <br>
+            INSERT INTO - INSERTO INTO Tabelle VALUES (0,'XxxYyyZzz',1) WHERE x=0 <br>
+            UPDATE Tabelle SET Plz=8212 WHERE x=0 <br>
+            DELETE FROM - DELETE FROM Tabelle WHERE x=0
         </p>
         <h2 id="10">
             Data Query Language
         </h2>
         <p>
-
+            Diese Teilsprache befasst sich ausschliesslich mit dem SELECT Statement dieses ist folgendermassen
+            aufgebaut: <br>
+            SELECT - SELECT Attribut(e) FROM Tabelle <br>
+            Jedoch kommen mit dem SELECT Statement diverse optionale Keywords, wichtig bei ihnen ist, dass sie auch in
+            dieser Reihenfolge angeordnet sind: <br>
+            WHERE x=2 - Filtert alle Datensätze raus, die diese Bedingung nicht erfüllen <br>
+            GROUP BY Attribut - Gruppiert nach einem Attribut <br>
+            HAVING x=0 - Filtert zusätzlich nach dem GROUP BY Keywords <br>
+            ORDER BY Attribut(e) (DESC)- Ordnet die Ausgabe entweder auf- oder absteigend
         </p>
         <h1 id="11">
             Verbindungen mit SQL
         </h1>
         <p>
-
+            Um das volle Potenzial von SQL auszuschöpfen, sollte man definitv Verständniss mit dem Verbinden von SQL
+            Tabellen aufweisen können. Wie das Ganze genauer funktioniert und wann dessen Verwendung angebracht ist,
+            erkläre ich in diesem Kapitel.
         </p>
         <h2 id="12">
             Relationale Datenbanken
         </h2>
         <p>
-
+            Eine relationale Datenbank ist nichts Anderes wie untereinander verbundene Tabellen, die eine gewisse
+            "Beziehung" haben. Beziehung in dem Sinne, dass Veränderungen in der einten Tabelle, zu Veränderungen in
+            einer anderen Tabelle führen. Hauptsächlich wird diese Methode bei grösseren Datenbanken verwendet um
+            einerseits effizienter arbeiten zu können und andererseits eine redundanzfreie Datenbank zu haben, welche
+            eine referentielle Integrität aufweist und somit keine Fehleinträge aufweist. <br> <br> Das ganze wird mit
+            Primär- und Fremdschlüssel bewerkstelligt. Die Schlüssel stellen hierbei die Verbindung zwischen den
+            einzelnen Tabellen dar. Ob ein Attribut ein Primär- oder Fremdschlüssel ist, kann man ganz einfach mithilfe
+            der DML definieren. <br> <br> Da dies ein eher komplexes Thema ist, verlinke ich <a
+            href="https://docs.microsoft.com/en-us/sql/relational-databases/tables/primary-and-foreign-key-constraints?view=sql-server-2017">HIER</a>
+            noch
+            eine nützliche Seite, um die Schlüssel besser kennenlernen zu können.
         </p>
         <h2 id="13">
             Modellieren & Normalisieren
