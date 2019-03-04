@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="de-ch">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +8,6 @@
     <link href="styles.css" rel="stylesheet" type="text/css">
     <link rel="icon" href="https://www.getsoftwareservice.com/wp-content/uploads/2015/05/SQL-Training.png">
 </head>
-
 <body>
     <header>
         <nav class="navdropdown">
@@ -52,7 +50,7 @@
             SQL
         </h1>
         <p>
-            SQL heisst ausgeschrieben <b>Structured Query Language</b> und ist nichts anderes wie eine
+            SQL heisst ausgeschrieben <b>Structured Query Language</b> und ist nichts Anderes wie eine
             Datenbanksprache, welche die Möglichkeiten zum Einfügen, Verändern, Löschen und Abfragen von Datenbanken
             bietet. <br> Ihre Syntax ist relativ einfach aufgebaut. Jedoch gibt es unterschiedliche "Dialekte" also
             Abweichungen von verwandten SQL Sprachen, wie zum Beispiel MySQL oder SQL-Server. <br> <br> SQL
@@ -66,7 +64,7 @@
         <p>
             Ich gehe auf die Installation bei einer Linux-Distribution ein, da wir uns im Terminal aufhalten
             werden. <br> Bekanntlich sind Installation mit Linux ziemlich banal, auch hier ist es keine Schwierigkeit
-            SQL zu benutzen. Wir benutzen am Besten MySQL um allen Linux-Distribution gleiche Voraussetzungen zu
+            SQL zu benutzen. Wir benutzen am besten MySQL um allen Linux-Distribution gleiche Voraussetzungen zu
             schaffen. Die Version 4.0.13 ist zwar etwas veraltet, jedoch beinhaltet sie Alles was wir brauchen und
             nicht mehr und nicht weniger. <br> Installieren tut man MySQL mit folgenden Befehlen im Terminal: <br>- sudo
             apt-get install mysql <br>- Passwort eingeben <br>- Y schreiben <br> Und schon ist MySQL installiert. Ab
@@ -97,7 +95,7 @@
             ich mache daher lieber eine kleinere Liste, die aber nur die essenziellen Funktionen beinhaltet. Hier ist
             sie: <br>
             ABS() - Rechnet den Betrag aus <br>
-            AVG() - Ergibt den Durchschnitt von alle nausgewählten Werten <br>
+            AVG() - Ergibt den Durchschnitt von allen ausgewählten Werten <br>
             CEILING() / CEIL() - Rundet die Zahl auf <br>
             COUNT() - Ergibt die Anzahl an von einer Tabelle, welche eine bestimmte Bedingung erfüllen <br>
             FLOOR() - Rundet die Zahl ab <br>
@@ -172,7 +170,7 @@
             Verbindungen mit SQL
         </h1>
         <p>
-            Um das volle Potenzial von SQL auszuschöpfen, sollte man definitv Verständniss mit dem Verbinden von SQL
+            Um das volle Potenzial von SQL auszuschöpfen, sollte man definitiv Verständnis mit dem Verbinden von SQL
             Tabellen aufweisen können. Wie das Ganze genauer funktioniert und wann dessen Verwendung angebracht ist,
             erkläre ich in diesem Kapitel.
         </p>
@@ -184,7 +182,7 @@
             "Beziehung" haben. Beziehung in dem Sinne, dass Veränderungen in der einten Tabelle, zu Veränderungen in
             einer anderen Tabelle führen. Hauptsächlich wird diese Methode bei grösseren Datenbanken verwendet um
             einerseits effizienter arbeiten zu können und andererseits eine redundanzfreie Datenbank zu haben, welche
-            eine referentielle Integrität aufweist und somit keine Fehleinträge aufweist. <br> <br> Das ganze wird mit
+            eine referentielle Integrität aufweist und somit keine Fehleinträge aufweist. <br> <br> Das Ganze wird mit
             Primär- und Fremdschlüssel bewerkstelligt. Die Schlüssel stellen hierbei die Verbindung zwischen den
             einzelnen Tabellen dar. Ob ein Attribut ein Primär- oder Fremdschlüssel ist, kann man ganz einfach mithilfe
             der DML definieren. <br> <br> Da dies ein eher komplexes Thema ist, verlinke ich <a target="_blank"
@@ -197,8 +195,8 @@
         <p>
             Das Modellieren und Normalisieren baut auf die Relationalen Datenbanken auf, ich empfehle euch daher dieses
             Kapitel zuerst zu lesen. <br> <br>
-            Mit dem oben erlernten Wissen, kann man jetzt loslegen. Das Modellieren bezeichnet das einfache erstellen
-            eines Datenbankmodell. Das Normalisieren ist hingegen das Umsortieren, in diesen vorher mit dem Modellieren
+            Mit dem oben erlernten Wissen, kann man jetzt loslegen. Das Modellieren bezeichnet das einfache Erstellen
+            eines Datenbankmodells. Das Normalisieren ist hingegen das Umsortieren, in diesen vorher mit dem Modellieren
             definierten Zustand. Dafür braucht man meist die Primär- und Fremdschlüssel um die Tabellen korrekt
             verknüpfen
             zu können.
@@ -209,7 +207,8 @@
         <p>
             JOINs sind für Manche das schwierigste Kapitel im Bereich SQL, ich denke das liegt daran, dass nicht nur
             dessen Verwendung komplex ist, sondern eher die Herleitung, wann der Einsatz von JOINs notwendig ist und
-            welcher JOIN gebraucht wird. <br> <br> Grundsätzlich werden die JOINs in vier einzelne JOINs aufgeteilt: Den
+            welcher JOIN gebraucht wird. Wenn man aber diese Grundlagen versteht, kann man mit Leichtigkeit alle Fälle
+            mit JOINs meistern. <br> <br> Grundsätzlich werden die JOINs in vier einzelne JOINs aufgeteilt: Den
             Inner JOIN, den Left/Right Inner JOIN, den Left/Right Outer JOIN und zuletzt den Full Outer JOIN.
         </p>
         <h3>
@@ -247,5 +246,4 @@
         </p>
     </footer>
 </body>
-
 </html>
