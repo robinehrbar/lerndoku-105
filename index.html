@@ -55,18 +55,21 @@
             SQL heisst ausgeschrieben <b>Structured Query Language</b> und ist nichts anderes wie eine
             Datenbanksprache, welche die Möglichkeiten zum Einfügen, Verändern, Löschen und Abfragen von Datenbanken
             bietet. <br> Ihre Syntax ist relativ einfach aufgebaut. Jedoch gibt es unterschiedliche "Dialekte" also
-            Abweichungen von verwandten SQL Sprachen, wie zum Beispiel MySQL oder SQL-Server. <br> <br> SQL funktioniert grundsätzlich so, dass man als allererstes Datenbanken erstellen, bearbeiten und löschen kann. <br>
+            Abweichungen von verwandten SQL Sprachen, wie zum Beispiel MySQL oder SQL-Server. <br> <br> SQL
+            funktioniert grundsätzlich so, dass man als allererstes Datenbanken erstellen, bearbeiten und löschen kann.
+            <br> Darin sind dann Tabellen. Tabellen können auch untereinander verknüpft werden. <br> In Tabellen hat es
+            dann Spalten welche einem Attribut entsprechen.
         </p>
         <h2 id="03">
             Installation & Vorbereitung von SQL
         </h2>
         <p>
-            Ich gehe hier auf die Installation bei einer Linux-Distribution ein, da wir uns im Terminal aufhalten
+            Ich gehe auf die Installation bei einer Linux-Distribution ein, da wir uns im Terminal aufhalten
             werden. <br> Bekanntlich sind Installation mit Linux ziemlich banal, auch hier ist es keine Schwierigkeit
             SQL zu benutzen. Wir benutzen am Besten MySQL um allen Linux-Distribution gleiche Voraussetzungen zu
             schaffen. Die Version 4.0.13 ist zwar etwas veraltet, jedoch beinhaltet sie Alles was wir brauchen und
-            nicht mehr und nicht weniger. <br> Installieren tut man MySQL mit folgenden Befehlen im Terminal: <br> sudo
-            apt-get install mysql <br> Passwort eingeben <br> Y schreiben <br> Und schon ist MySQL installiert. Ab
+            nicht mehr und nicht weniger. <br> Installieren tut man MySQL mit folgenden Befehlen im Terminal: <br>- sudo
+            apt-get install mysql <br>- Passwort eingeben <br>- Y schreiben <br> Und schon ist MySQL installiert. Ab
             jetzt kann man MySQL mit diesem Befehl öffnen: <br> mysql -u root -p <br> Und dann kann man das Passwort
             eingeben, welches man bei der Installation im pinken Dialogfenster definiert hat. Somit ist man nun in
             MySQL.
@@ -84,7 +87,30 @@
             Funktionen & Operatoren
         </h2>
         <p>
-
+            Mit SQL kommen diverse vorgegebene Funktionen, mit welchen bestimmte Operationen durchgeführt werden können.
+            In MySQL ist es leider nicht möglich eigene Funktionen zu definieren. Es ist zwar prinzipiell möglich, wenn
+            sie in C++ geschrieben sind, in einer Datenbank gespeichert wurden und zusätzlich das dynamische Laden von
+            Bibliotheken erlaubt ist. Aber darauf werde ich jetzt nicht weiter eingehen. <br> <br> Bei den meisten
+            Funktionen darf zwischen dem Namen und der ersten öffnenden Klammer <b>KEIN</b> Leerzeichen enthalten sein,
+            sonst gibt es eine Fehlermeldung! Um dieses Risiko zu vermeiden, sollte man sich direkt angewöhnen nie ein
+            Leerzeichen zu setzen. <br> <br> Eine komplette Liste aller MySQL Funktionen zu machen wäre unübersichtlich,
+            ich mache daher lieber eine kleinere Liste, die aber nur die essenziellen Funktionen beinhaltet. Hier ist
+            sie: <br>
+            ABS() - Rechnet den Betrag aus <br>
+            AVG() - Ergibt den Durchschnitt von alle nausgewählten Werten <br>
+            CEILING() / CEIL() - Rundet die Zahl auf <br>
+            COUNT() - Ergibt die Anzahl an von einer Tabelle, welche eine bestimmte Bedingung erfüllen <br>
+            FLOOR()	- Rundet die Zahl ab <br>
+            LOWER() - Ergibt den Wert in Grossbuchstaben <br>
+            MAX() - Ergibt das Maximum aus einem bestimmten Bereich <br>
+            MIN() - Ergibt das Minimum aus einem bestimmten Bereich <br>
+            PI() - Gibt Pi aus <br>
+            RAND() - Ergibt eine zufällige Zahl zwischen 0 und 1 ohne 1 <br>
+            REVERSE() - Ergibt den ausgewählten Wert rückwärts angezeigt <br>
+            ROUND() - Rundet die Zahl mathematisch auf oder ab <br>
+            SIGN() - Ergibt eine 1 bei positiven Zahlen, eine -1 bei negativen Zahlen und eine 0 bei 0. <br>
+            SQRT() - Ergibt die Quadratwurzel von der Zahl <br>
+            UPPER() - Ergibt den Wert in Kleinbuchstaben 
         </p>
         <h1 id="06">
             Übersicht Sprachen
