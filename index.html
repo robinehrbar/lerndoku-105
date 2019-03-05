@@ -208,36 +208,58 @@
             JOINs sind für Manche das schwierigste Kapitel im Bereich SQL, ich denke das liegt daran, dass nicht nur
             dessen Verwendung komplex ist, sondern eher die Herleitung, wann der Einsatz von JOINs notwendig ist und
             welcher JOIN gebraucht wird. Wenn man aber diese Grundlagen versteht, kann man mit Leichtigkeit alle Fälle
-            mit JOINs meistern. <br> <br> Grundsätzlich werden die JOINs in vier einzelne JOINs aufgeteilt: Den
-            Inner JOIN, den Left/Right Inner JOIN, den Left/Right Outer JOIN und zuletzt den Full Outer JOIN.
+            mit JOINs meistern. Die JOINs spielen sich in der DQL ab, sprich es sind Abfragen, die Nichts an den
+            eigentlichen Tabellen verändern. Jedoch kann man sie auch einfügen nach einer SELECT Funktion, aber dies ist
+            nur selten der Fall. <br> <br> Grundsätzlich werden die JOINs in vier einzelne JOINs aufgeteilt: Den
+            Inner JOIN, den Left/Right Inner JOIN, den Left/Right Outer JOIN und zuletzt den Full Outer JOIN. <br>
+            <img class="B1" src="JOINs.jpg" alt="JOINs">
         </p>
         <h3>
             Inner JOIN
         </h3>
         <p>
-
-            <img class="B2" src="" alt="Inner JOIN">
+            In der Mitte sieht man den inneren JOIN. Aus meinen eigenen Erfahrungen ist dies der meistverwendete JOIN.
+            Man verwendet in wenn man aus verschiedenen Tabellen eine Abfrage machen will, die gemeinsame Datensätze
+            ausspucken soll. <br> <br> <br> Ein <b>Beispiel</b> hierbei wäre: <br> Man hat eine Tabelle mit
+            Produkten(Produkte). <br> Und eine Tabelle mit Kunden(Kunden) <br> Jetzt kann man mit dem Inner JOIN
+            abfragen, welche Kunden Produkte bestellt haben, beziehungsweise welche Produkte von Kunden bestellt wurden.
+            <br> Die Abfrage würde folgendermassen aussehen: <br> <br> SELECT Produkte.Produktname, Kunden.Vorname,
+            Kunden.Nachname <br> FROM Produkte JOIN Kunden <br> ON Produkte.ProduktNr = Kunden.ProduktNr
+            <br>
         </p>
         <h3>
             Left/Right Inner JOIN
         </h3>
         <p>
-
-            <img class="B3" src="" alt="Left/Right Inner JOIN">
+            Auf mittlerer Höhe links und rechts sieht man den Left Inner JOIN und den Right Inner JOIN. Hier kann der
+            Name etwas verwirrend sein, da er ja Left/Right <b>Inner</b> JOIN heisst, obwohl es eigentlich in dem
+            Kreismodell nur der äussere Teil ist. Auf jeden Fall ist dieser JOIN auch sehr relevant. <br> <br> <br>
+            <b>Beispiel:</b> <br> Nehmen wir wieder die Tabellen Produkte und Kunden. hier spielt es jetzt eine Rolle ob
+            man den rechten oder linken inneren JOIN verwendet. <br> Den je nach Anordnung der Tabellen zeigt es
+            entweder alle Produkte an, die noch nie von einem Kunden bestellt worden sind oder alle Kunden, die noch nie
+            ein Produkt bestellt haben <br> Die Syntax für noch nie bestellte Produkte sieht so aus: <br> <br> SELECT
+            Produkte.Produktname <br> FROM Produkte LEFT JOIN Kunden <br> ON Produkte.ProduktNr = Kunden.ProduktNr <br>
+            WHERE Kunden.KundenNr IS NULL
         </p>
         <h3>
             Left/Right Outer JOIN
         </h3>
         <p>
-
-            <img class="B4" src="" alt="Left/Right Outer JOIN">
+            Oben jeweils rechts und links zu sehen sind die linken und rechten äusseren JOINS. Meiner Meinung nach
+            gehört dieser sowie der folgende Full Outer JOIN zu den weniger nützlichen JOINs. Bei dem aktuellen
+            Right/Left Outer JOIN ist der Nutzen foglendermassen: Angenommen man hat zwei Tabellen A und B, nun will man
+            die Tabelle A sehen mit gegebenfalls zusätzlichen Informationen aus der Tabelle B. <br> <br> Ich versuche
+            das Ganze noch ein wenig zu vereinfach mittels eines <b> Beispiels. </b> <br> Für dieses Beispiel nehmen wir
+            zwei andere Tabellen. Einerseits Mitarbeiter und andererseits Dienstwagen. <br> Jetzt wollen wir alle
+            Mitarbeiter sehen, mit (sofern vorhanden) ihren Dienstwägen. <br> <br> SELECT Mitarbeiter.Vorname,
+            Mitarbeiter.Nachname, Mitarbeiter.Abteilung, Dienstwagen.DienstwagenNr, Dienstwagen.Kennzeichen <br> FROM
+            Mitarbeiter JOIN Dienstwagen <br> ON Mitarbeiter.MitarbeiterID = Dienstwagen.MitarbeiterID
         </p>
         <h3>
             Full Outer JOIN
         </h3>
         <p>
 
-            <img class="B5" src="" alt="Full Outer JOIN">
         </p>
     </main>
     <footer>
