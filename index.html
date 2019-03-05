@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de-ch">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link href="styles.css" rel="stylesheet" type="text/css">
     <link rel="icon" href="https://www.getsoftwareservice.com/wp-content/uploads/2015/05/SQL-Training.png">
 </head>
+
 <body>
     <header>
         <nav class="navdropdown">
@@ -224,7 +226,7 @@
             Produkten(Produkte). <br> Und eine Tabelle mit Kunden(Kunden) <br> Jetzt kann man mit dem Inner JOIN
             abfragen, welche Kunden Produkte bestellt haben, beziehungsweise welche Produkte von Kunden bestellt wurden.
             <br> Die Abfrage würde folgendermassen aussehen: <br> <br> SELECT Produkte.Produktname, Kunden.Vorname,
-            Kunden.Nachname <br> FROM Produkte JOIN Kunden <br> ON Produkte.ProduktNr = Kunden.ProduktNr
+            Kunden.Nachname <br> FROM Produkte JOIN Kunden <br> ON Produkte.ProduktNr = Kunden.ProduktNr;
             <br>
         </p>
         <h3>
@@ -239,7 +241,7 @@
             entweder alle Produkte an, die noch nie von einem Kunden bestellt worden sind oder alle Kunden, die noch nie
             ein Produkt bestellt haben <br> Die Syntax für noch nie bestellte Produkte sieht so aus: <br> <br> SELECT
             Produkte.Produktname <br> FROM Produkte LEFT JOIN Kunden <br> ON Produkte.ProduktNr = Kunden.ProduktNr <br>
-            WHERE Kunden.KundenNr IS NULL
+            WHERE Kunden.KundenNr IS NULL;
         </p>
         <h3>
             Left/Right Outer JOIN
@@ -247,19 +249,30 @@
         <p>
             Oben jeweils rechts und links zu sehen sind die linken und rechten äusseren JOINS. Meiner Meinung nach
             gehört dieser sowie der folgende Full Outer JOIN zu den weniger nützlichen JOINs. Bei dem aktuellen
-            Right/Left Outer JOIN ist der Nutzen foglendermassen: Angenommen man hat zwei Tabellen A und B, nun will man
-            die Tabelle A sehen mit gegebenfalls zusätzlichen Informationen aus der Tabelle B. <br> <br> Ich versuche
+            Right/Left Outer JOIN ist der Nutzen folgendermassen: Angenommen man hat zwei Tabellen A und B, nun will man
+            die Tabelle A sehen mit gegebenenfalls zusätzlichen Informationen aus der Tabelle B. <br> <br> <br> Ich
+            versuche
             das Ganze noch ein wenig zu vereinfach mittels eines <b> Beispiels. </b> <br> Für dieses Beispiel nehmen wir
             zwei andere Tabellen. Einerseits Mitarbeiter und andererseits Dienstwagen. <br> Jetzt wollen wir alle
             Mitarbeiter sehen, mit (sofern vorhanden) ihren Dienstwägen. <br> <br> SELECT Mitarbeiter.Vorname,
             Mitarbeiter.Nachname, Mitarbeiter.Abteilung, Dienstwagen.DienstwagenNr, Dienstwagen.Kennzeichen <br> FROM
-            Mitarbeiter JOIN Dienstwagen <br> ON Mitarbeiter.MitarbeiterID = Dienstwagen.MitarbeiterID
+            Mitarbeiter JOIN Dienstwagen <br> ON Mitarbeiter.MitarbeiterID = Dienstwagen.MitarbeiterID;
         </p>
         <h3>
             Full Outer JOIN
         </h3>
         <p>
-
+            Als letztes gibt es noch den Full Outer JOIN, dieser ist unten links auf dem Bild vorzufinden. Wie oben
+            schonn erwähnt, kommt er meiner Erfahrung nach relativ selten vor. Dennoch kann er in bestimmten Situationen
+            sehr praktisch sein. <br> <br> <br> Zum <b>Beispiel</b>, wenn man als Datenbankadministrator eine Übersicht
+            haben
+            will, über die Tabellen Angestellte und Aufträge. Man sieht dann direkt, welche Aufträge noch keine
+            zugewiese Angestellte haben sowie welche Angestellte noch keine oder erst wenige Aufträge haben. <br> Eine
+            solche Syntax würde dann folgendermassen aussehen: <br> <br> SELECT Angestellte.Vorname,
+            Angestellte.Nachname, Auftrag.Bezeichnung <br> FROM Angestellte LEFT JOIN Aufträge <br> ON
+            Angestellte.AngestelltenID = Aufträge.AngestelltenID UNION <br> SELECT Angestellte.Vorname,
+            Angestellte.Nachname, Auftrag.Bezeichnung <br> FROM Angestellte RIGHT JOIN Aufträge <br> ON
+            Angestellte.AngestelltenID = Aufträge.AngestelltenID;
         </p>
     </main>
     <footer>
@@ -268,4 +281,5 @@
         </p>
     </footer>
 </body>
+
 </html>
