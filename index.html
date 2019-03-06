@@ -235,13 +235,14 @@
         <p>
             Auf mittlerer Höhe links und rechts sieht man den Left Inner JOIN und den Right Inner JOIN. Hier kann der
             Name etwas verwirrend sein, da er ja Left/Right <b>Inner</b> JOIN heisst, obwohl es eigentlich in dem
-            Kreismodell nur der äussere Teil ist. Auf jeden Fall ist dieser JOIN auch sehr relevant. <br> <br> <br>
-            <b>Beispiel:</b> <br> Nehmen wir wieder die Tabellen Produkte und Kunden. hier spielt es jetzt eine Rolle ob
-            man den rechten oder linken inneren JOIN verwendet. <br> Den je nach Anordnung der Tabellen zeigt es
-            entweder alle Produkte an, die noch nie von einem Kunden bestellt worden sind oder alle Kunden, die noch nie
-            ein Produkt bestellt haben <br> Die Syntax für noch nie bestellte Produkte sieht so aus: <br> <br> SELECT
-            Produkte.Produktname <br> FROM Produkte LEFT JOIN Kunden <br> ON Produkte.ProduktNr = Kunden.ProduktNr <br>
-            WHERE Kunden.KundenNr IS NULL;
+            Kreismodell nur der äussere Teil ist. Auf jeden Fall ist dieser JOIN auch sehr relevant. Man braucht den
+            JOIN, wenn man nur den Teil einer Tabelle haben will, der keine Gemeinsamkeiten mit einer anderen Tabelle
+            hat.<br> <br> <br> <b>Beispiel:</b> <br> Nehmen wir wieder die Tabellen Produkte und Kunden. hier spielt es
+            jetzt eine Rolle ob man den rechten oder linken inneren JOIN verwendet. <br> Den je nach Anordnung der
+            Tabellen zeigt es entweder alle Produkte an, die noch nie von einem Kunden bestellt worden sind oder alle
+            Kunden, die noch nie ein Produkt bestellt haben <br> Die Syntax für noch nie bestellte Produkte sieht so
+            aus: <br> <br> SELECT Produkte.Produktname <br> FROM Produkte LEFT JOIN Kunden <br> ON Produkte.ProduktNr =
+            Kunden.ProduktNr <br> WHERE Kunden.KundenNr IS NULL;
         </p>
         <h3>
             Left/Right Outer JOIN
@@ -263,11 +264,11 @@
         </h3>
         <p>
             Als letztes gibt es noch den Full Outer JOIN, dieser ist unten links auf dem Bild vorzufinden. Wie oben
-            schonn erwähnt, kommt er meiner Erfahrung nach relativ selten vor. Dennoch kann er in bestimmten Situationen
+            schon erwähnt, kommt er meiner Erfahrung nach relativ selten vor. Dennoch kann er in bestimmten Situationen
             sehr praktisch sein. <br> <br> <br> Zum <b>Beispiel</b>, wenn man als Datenbankadministrator eine Übersicht
             haben
             will, über die Tabellen Angestellte und Aufträge. Man sieht dann direkt, welche Aufträge noch keine
-            zugewiese Angestellte haben sowie welche Angestellte noch keine oder erst wenige Aufträge haben. <br> Eine
+            zugewiesene Angestellte haben sowie welche Angestellte noch keine oder erst wenige Aufträge haben. <br> Eine
             solche Syntax würde dann folgendermassen aussehen: <br> <br> SELECT Angestellte.Vorname,
             Angestellte.Nachname, Auftrag.Bezeichnung <br> FROM Angestellte LEFT JOIN Aufträge <br> ON
             Angestellte.AngestelltenID = Aufträge.AngestelltenID UNION <br> SELECT Angestellte.Vorname,
