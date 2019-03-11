@@ -43,6 +43,10 @@ code {
     display: block;
 }
 
+a {
+    font-weight: bold;
+}
+
 .navbar {
     overflow: hidden;
     background-color: #333;
