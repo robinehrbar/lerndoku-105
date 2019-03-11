@@ -15,7 +15,7 @@ header {
 }
 
 #footerid {
-    background: rgb(114, 114, 114);
+    background: rgb(24, 218, 40);
     color: black;
     font-weight: bold;
     width: 100%;
@@ -25,6 +25,7 @@ header {
     position: fixed;
     margin-bottom: 0;
     padding: 10px 0;
+    border: 2px solid black;
 }
 
 h1, h2 {
@@ -33,6 +34,13 @@ h1, h2 {
 
 .titel {
     font-size: 50px;
+}
+
+code {
+    background: grey;
+    font-style: italic;  
+    border: 2px solid black;
+    display: block;
 }
 
 .navbar {
